@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet"
+    href="Style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+    <link rel="icon" type="image/c-icon" href="C:\Users\Ravi\Desktop\University Courses\XHAW 5112\NationEmpower\EmpoweringTheNation.JPG">
+    <!--
+
+      
+    -->
+
+</head>
+
+
+<style>
+  </style>
+
+    <div class="Course2-container">
+     
+       
+<body>
+        <header>
+          <nav>
+            <h4
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;><a href="Homepage.html">Home</a>
+			    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Courses.html">Courses</a>
+			    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="fees.html">Fees</a>
+			    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="About.html">About</a>
+			    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Contact.html">Contact</a>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Calculation.html">Calculation</a>
+			</h4>
+		  </nav>
+        </heder>
+
+    <div class="container">
+          <h1>Course Selection & Discount Calculator</h1>
+
+
+    <div class="courses">
+        <h3>Select Six-Month Courses (R1500 each):</h3>
+        <input type="checkbox" id="firstAid" value="1500">
+        <label for="firstAid">First Aid - R1500</label><br>
+        <input type="checkbox" id="sewing" value="1500">
+        <label for="sewing">Sewing - R1500</label><br>
+        <input type="checkbox" id="landscaping" value="1500">
+        <label for="landscaping">Landscaping - R1500</label><br>
+        <input type="checkbox" id="lifeSkills" value="1500">
+        <label for="lifeSkills">Life Skills - R1500</label><br>
+    </div>
+
+    <div class="courses">
+        <h3>Select Six-Week Short Courses (R750 each):</h3>
+        <input type="checkbox" id="childMinding" value="750">
+        <label for="childMinding">Child Minding - R750</label><br>
+        <input type="checkbox" id="cooking" value="750">
+        <label for="cooking">Cooking - R750</label><br>
+        <input type="checkbox" id="gardenMaintenance" value="750">
+        <label for="gardenMaintenance">Garden Maintenance - R750</label><br>
+    </div>
+
+    <button onclick="calculateTotal()">Calculate Total</button>
+
+    <div class="result">
+        <p id="totalPrice">Total Price: R0.00</p>
+        <p id="discount">Discount: 0%</p>
+        <p id="finalPrice">Final Price after Discount: R0.00</p>
+    </div>
+
+    
+    </div>
+
+        <script>
+      function calculateTotal() {
+        
+        const courses = [
+            document.getElementById('firstAid'),
+            document.getElementById('sewing'),
+            document.getElementById('landscaping'),
+            document.getElementById('lifeSkills'),
+            document.getElementById('childMinding'),
+            document.getElementById('cooking'),
+            document.getElementById('gardenMaintenance')
+        ];
+
+        let total = 0;
+        let selectedCourses = 0;
+
+        
+        courses.forEach(course => {
+            if (course.checked) {
+                total += parseInt(course.value);
+                selectedCourses++;
+            }
+        });
+
+        
+        let discount = 0;
+        if (selectedCourses === 2) {
+            discount = 5;
+        } else if (selectedCourses === 3) {
+            discount = 10;
+        } else if (selectedCourses > 3) {
+            discount = 15;
+        }
+
+        
+        let discountAmount = (discount / 100) * total;
+        let finalPrice = total - discountAmount;
+
+        
+        document.getElementById('totalPrice').innerHTML = `Total Price: R${total.toFixed(2)}`;
+        document.getElementById('discount').innerHTML = `Discount: ${discount}%`;
+        document.getElementById('finalPrice').innerHTML = `Final Price after Discount: R${finalPrice.toFixed(2)}`;
+    }
+</script>
+<footer>
+    &copy; Empowering The Nation Est.2024
+</footer>
+
+</body>
+</html>

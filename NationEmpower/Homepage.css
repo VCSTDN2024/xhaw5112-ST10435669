@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link href="./homepage.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+       
+        <div class="homepage-container">
+         
+          <div class="homepage1">
+            <img
+            src="./1406.jpg"
+            alt="image"
+            class="homepage-logo"
+          />
+            <a href="./Course 1.html"><button type="button" class="homepage-button button">Course 1</button></a>
+            <a href="./Course 2.html"><button type="button" class="homepage-button1 button">Course 2</button></a>
+            <a href="./Course 3.html"><button type="button" class="homepage-button2 button">Course 3</button></a>
+            <a href="./Course 4.html"><button type="button" class="homepage-button3 button">Course 4</button></a>
+            <a href="./Course 5.html"><button type="button" class="homepage-button4 button">Course 5</button></a>
+            <a href="./Course 6.html"><button type="button" class="homepage-button5 button">Course 6</button></a>
+            <a href="./Course 7.html"><button type="button" class="homepage-button6 button">Course 7</button></a>
+            <a href="./Couse 8.html"><button type="button" class="homepage-button7 button">Course 8</button></a>
+            <h1 class="homepage-text">Heading</h1>
+            <span class="homepage-text1">Text</span>
+            <span class="homepage-text2">Text</span>
+          </div>
+        </div>
+      </div>
+       
+      <footer> 
+        <nav>
+        <ul style="left: 830px;">
+            <li><a class="active" href="./homepage.html">Home</a></li>
+            <li><a href="#Coursess">Courses</a></li>
+            <li><a href="#fess">Fees</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#other">Other</a></li>
+            <li style="float:right"><a href="#about">About</a></li>
+          </ul>
+        </nav>
+        </center>
+      </footer>
+
+</body>
+</html>
